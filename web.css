@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(pngtree-dark-green-cyan-paper-cut-minimalist-background-for-brochure-poster-banner-image_405384.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(38, 111, 159);
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid rgb(38, 111, 159);
+    transition: 0.4s linear;
+}
+
+.menu a:hover::before {
+    width: 90%;
+}
+
+.register a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: rgb(38, 111, 159);
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.register a:hover {
+    background: transparent;
+    border: 1px solid rgb(38, 111, 159);
+}
+
+.str {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.str span {
+    letter-spacing: 10px;
+}
+
+.str h1 {
+    font-size: 5.5em;
+}
+
+.str a {
+    text-decoration: none;
+    background: rgb(46, 94, 136);
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+
+}
+
+.str a:hover {
+    background: transparent;
+    border: 1px solid rgb(46, 94, 136);
+}
+.title{
+    padding: 50px 15% 10px;
+    margin: left 0 right 0;
+    font-size: 20px;
+    color: #131313;
+    border-top: 5px solid #292727;
+    font-family: sans-serif;
+}
+.features{
+    padding: 50px 15% 10px;
+    margin: left 0 right 0;
+    color: black;
+    font-size: 22px;
+}
+.row{
+    margin: left 0 right 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: cadetblue;
+    box-shadow: #ece2e2;
+}
+.faq{
+    padding: 50px 15% 10px;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+input[type="radio"]{
+    display: none;
+}
+.acc{
+    
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+
+}
+.acc li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.acc li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #7da3ac;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+.acc .content{
+    background: #f4ebeb;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s,padding 0.5s;
+}
+.acc input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.acc input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
